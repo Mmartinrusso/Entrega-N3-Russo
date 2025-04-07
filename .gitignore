@@ -1,0 +1,12 @@
+# Node modules (si los tienes)
+node_modules/
+
+# Archivos de sistema (macOS, Windows)
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Archivos de compilación temporales o de configuración
+*.tmp

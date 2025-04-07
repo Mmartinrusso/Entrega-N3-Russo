@@ -1,0 +1,162 @@
+/* =================================================== */
+/* REINICIO Y CONFIGURACIÓN GENERAL */
+/* =================================================== */
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  overflow-x: hidden;
+  font-family: Arial, sans-serif;
+  background-color: rgb(236, 236, 235);
+}
+
+/* =================================================== */
+/* ESTILOS PARA ENCABEZADOS */
+/* =================================================== */
+h1 {
+  color: #cf3838;
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+h2 {
+  background-color: #c03333;
+  color: rgb(233, 197, 37);
+  padding: 10px;
+  font-weight: normal;
+  text-align: center;
+}
+
+/* =================================================== */
+/* ESTILOS PARA EL HEADER Y NAVBAR */
+/* =================================================== */
+header,
+.upbar {
+  background-color: #c03333;
+  padding: 10px;
+  text-align: center;
+}
+
+header h1,
+.upbar h1 {
+  color: rgb(233, 197, 37);
+}
+
+/* =================================================== */
+/* ESTILOS PARA LA NAVBAR */
+/* =================================================== */
+.nav {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-item {
+  margin: 0 15px;
+  display: inline-block;
+}
+
+.nav-link {
+  color: rgb(233, 197, 37);
+  text-decoration: none;
+}
+
+/* Sobrescribir el estilo del enlace activo de Bootstrap */
+.nav-link.active,
+.nav-link:focus {
+  color: rgb(233, 197, 37) !important;
+  background-color: #c03333 !important;
+}
+
+/* =================================================== */
+/* ESTILOS PARA SECCIONES Y CONTENIDO */
+/* =================================================== */
+main {
+  /* Evita que el contenido se pegue a los bordes */
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-top: 50px; /* Ajuste global para bajar el contenido */
+}
+
+/* =================================================== */
+/* ESTILOS PARA EL FORMULARIO (si aplica) */
+/* =================================================== */
+#formulario {
+  background-color: #c03333;
+  color: rgb(233, 197, 37);
+  text-align: left;
+  font-size: 16px;
+  padding: 15px;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+
+#formulario input,
+#formulario select,
+#formulario textarea {
+  margin-bottom: 10px;
+  display: block;
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+}
+
+#formulario input[type="submit"],
+#formulario button {
+  background-color: rgb(233, 197, 37);
+  color: #c03333;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+#formulario label {
+  margin-bottom: 5px;
+  display: inline-block;
+  font-weight: bold;
+}
+
+/* =================================================== */
+/* EJEMPLO DE FLEXBOX Y GRID */
+/* =================================================== */
+/* Clase para usar Flexbox en contenedores avanzados */
+.container-flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Clase para una galería con CSS Grid */
+.galeria {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+}
+
+/* =================================================== */
+/* MEDIA QUERIES PARA RESPONSIVIDAD */
+/* =================================================== */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  /* Ajuste del margen superior en dispositivos móviles */
+  main {
+    margin-top: 30px;
+  }
+}
+
+/* =================================================== */
+/* EVITAR QUE EL CONTENIDO LLEGUE HASTA LOS BORDES */
+/* =================================================== */
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: auto;
+}

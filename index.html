@@ -1,62 +1,100 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Home | Barillate</title>
+  <head>
+    <!-- =================================================== -->
+    <!-- Inicio del (Head) -->
+    <!-- =================================================== -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home | Barillate</title>
+    <!-- Bootstrap CSS (CDN) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" />
+    <!-- Hoja de estilos generada desde SCSS -->
+    <link rel="stylesheet" href="assets/css/main.css" />
+  </head>
+  <body>
+    <!-- =================================================== -->
+    <!-- Inicio del NAVBAR  -->
+    <!-- =================================================== -->
+    <header class="py-3 header-bg animated fadeInDown">
+      <div class="container">
+        <h1 class="text-center header-title pulse">Barillate</h1>
+        <nav>
+          <ul class="nav justify-content-center">
+            <li class="nav-item">
+              <a class="nav-link text-warning active" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-warning" href="sabores.html">Sabores</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-warning" href="tiendas.html">Tiendas</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-warning" href="sobrenosotros.html">Sobre Nosotros</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-warning" href="contacto.html">Contacto</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
 
-  <link
-    rel="stylesheet"
-    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
-  />
-  <link rel="stylesheet" href="styles.css" />
-</head>
-<body>
-    <header class="py-3 mb-4" style="background-color: #c03333;">
-        <div class="container">
-          <h1 class="text-center" style="color: rgb(233,197,37);">
-            Barillate
-          </h1>
-          <nav>
-            <ul class="nav justify-content-center">
-              <li class="nav-item">
-                <a class="nav-link text-warning" href="index.html">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link text-warning" href="sabores.html">Sabores</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link text-warning" href="tiendas.html">Tiendas</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link text-warning" href="sobrenosotros.html">Sobre Nosotros</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link text-warning" href="contacto.html">Contacto</a>
-              </li>
-            </ul>
-          </nav>
-        </div>
-      </header>
-      
-
-  <main class="container">
-    <div class="row">
-      <div class="col-12">
+    <!-- =================================================== -->
+    <!-- Inicio contenido principal -->
+    <!-- =================================================== -->
+    <main class="container mt-5 animated fadeInUp">
+      <section id="bienvenida">
         <h2 class="text-center mb-4">Bienvenidos a Barillate</h2>
         <p class="text-center">
-          Aquí podrás encontrar la mejor variedad de helados, sabores y tiendas.
+          Disfruta de la mejor experiencia en helados con sabores únicos y una presentación impecable.
         </p>
+      </section>
+
+<!-- =================================================== -->
+<!-- Galeria Carrusel -->
+<!-- =================================================== -->
+<section id="carrusel" class="mt-5">
+  <h3 class="text-center mb-4">Carrusel de Sabores</h3>
+  <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="assets/img/chocolate.jpg" class="d-block w-100" alt="Helado de chocolate" />
+      </div>
+      <div class="carousel-item">
+        <img src="assets/img/vainilla.jpg" class="d-block w-100" alt="Helado de vainilla" />
+      </div>
+      <div class="carousel-item">
+        <img src="assets/img/fresa.jpg" class="d-block w-100" alt="Helado de fresa" />
       </div>
     </div>
-  </main>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Anterior</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Siguiente</span>
+    </button>
+  </div>
+</section>
 
-  <footer class="bg-light text-center py-3 mt-4">
-    <p>Barillate - Todos los derechos reservados</p>
-  </footer>
+    </main>
 
-  <script
-    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
-  ></script>
-</body>
+    <!-- =================================================== -->
+    <!-- Footer  -->
+    <!-- =================================================== -->
+    <footer class="bg-light text-center py-3 mt-4">
+      <p>Barillate - Todos los derechos reservados</p>
+    </footer>
+
+    <!-- Bootstrap JS (opcional) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
 </html>

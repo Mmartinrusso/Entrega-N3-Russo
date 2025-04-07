@@ -1,0 +1,201 @@
+@charset "UTF-8";
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  font-family: Arial, sans-serif;
+  background-color: rgb(236, 236, 235);
+}
+
+header {
+  background-color: #c03333;
+  padding: 10px;
+  text-align: center;
+  transition: background-color 0.5s ease-in-out;
+}
+header .header-title {
+  color: rgb(233, 197, 37);
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.nav {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.nav-item {
+  margin: 0 15px;
+  display: inline-block;
+}
+.nav-link {
+  color: rgb(233, 197, 37);
+  text-decoration: none;
+  transition: color 0.3s ease-in-out;
+}
+.nav-link:hover {
+  color: rgb(198.925, 166.075, 20.075);
+}
+.nav-link.active, .nav-link:focus {
+  background-color: #c03333;
+  color: rgb(233, 197, 37);
+}
+
+main {
+  margin-top: 50px;
+  padding: 0 15px;
+}
+
+footer {
+  background-color: white;
+  text-align: center;
+  padding: 10px;
+  margin-top: 40px;
+}
+
+#formulario {
+  background-color: #c03333;
+  color: rgb(233, 197, 37);
+  text-align: left;
+  font-size: 16px;
+  padding: 15px;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+#formulario input,
+#formulario select,
+#formulario textarea {
+  margin-bottom: 10px;
+  display: block;
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+}
+#formulario input[type=submit],
+#formulario button {
+  background-color: rgb(233, 197, 37);
+  color: #c03333;
+  font-weight: bold;
+  cursor: pointer;
+}
+#formulario label {
+  margin-bottom: 5px;
+  display: inline-block;
+  font-weight: bold;
+}
+
+.caja {
+  background-color: #c03333;
+  color: rgb(233, 197, 37);
+  padding: 10px;
+  text-align: center;
+  font-size: 20px;
+  width: 50%;
+  height: 50vh;
+  border: 2px solid rgb(233, 197, 37);
+  margin: 10px;
+}
+
+.container-flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+@keyframes rotateIn {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes textPulse {
+  0% {
+    transform: scale(1);
+    text-shadow: none;
+  }
+  50% {
+    transform: scale(1.05);
+    text-shadow: 0 0 10px rgb(233, 197, 37);
+  }
+  100% {
+    transform: scale(1);
+    text-shadow: none;
+  }
+}
+/* Clases de utilidad para animaciones */
+.animated {
+  animation-duration: 0.8s;
+  animation-fill-mode: both;
+}
+
+.fadeInDown {
+  animation-name: fadeInDown;
+}
+
+.fadeInUp {
+  animation-name: fadeInUp;
+}
+
+.zoomIn {
+  animation-name: zoomIn;
+}
+
+/* Clase para rotar imágenes continuamente */
+.rotate {
+  animation: rotateIn 3s linear infinite;
+}
+
+/* Clase para aplicar efecto pulse al texto */
+.pulse {
+  animation: textPulse 2s infinite;
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+  main {
+    margin-top: 30px;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */

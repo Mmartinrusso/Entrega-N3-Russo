@@ -1,0 +1,9 @@
+// _responsive.scss
+@media (max-width: 768px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+  main {
+    margin-top: 30px;
+  }
+}
