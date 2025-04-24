@@ -1,10 +1,35 @@
-// _mixins.scss
-@mixin flex-center {
+// ---------- FLEX helpers ----------
+@mixin flex-center($dir: row, $gap: $spacer) {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: $dir;
+  gap: $gap;
 }
 
-@mixin transition($property, $duration: 0.3s, $ease: ease-in-out) {
-  transition: $property $duration $ease;
+// ---------- GRID helper ----------
+@mixin grid-center($cols, $gap: $spacer) {
+  display: grid;
+  grid-template-columns: repeat($cols, 1fr);
+  gap: $gap;
+}
+
+// ---------- TRANSITION ----------
+@mixin transition($prop, $dur: .3s, $ease: ease-in-out) {
+  transition: $prop $dur $ease;
+}
+
+// ---------- MEDIA query uso: @include mq(md){...}
+@mixin mq($bp) {
+  @media (min-width: map-get($breakpoints, $bp)) {
+    @content;
+  }
+}
+
+// ---------- Generar utilidades margin dinámica ----------
+$steps: 0 1 2 3 4 5;
+@each $n in $steps {
+  .m-#{$n}  { margin:  $n * .25rem !important; }
+  .mt-#{$n} { margin-top:    $n * .25rem !important; }
+  .mb-#{$n} { margin-bottom: $n * .25rem !important; }
 }

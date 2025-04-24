@@ -1,80 +1,161 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <!-- =================================================== -->
-    <!-- Inicio del (Head) -->
-    <!-- =================================================== -->
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sabores | Barillate</title>
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" />
-    <!-- Hoja de estilos generada desde SCSS -->
-    <link rel="stylesheet" href="assets/css/main.css" />
-  </head>
-  <body>
-    <!-- =================================================== -->
-    <!-- Inicio del NAVBAR -->
-    <!-- =================================================== -->
-    <header class="py-3 header-bg animated fadeInDown">
-      <div class="container">
-        <h1 class="text-center header-title pulse">Barillate</h1>
-        <nav>
-          <ul class="nav justify-content-center">
-            <li class="nav-item">
-              <a class="nav-link text-warning" href="index.html">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link text-warning active" href="sabores.html">Sabores</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link text-warning" href="tiendas.html">Tiendas</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link text-warning" href="sobrenosotros.html">Sobre Nosotros</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link text-warning" href="contacto.html">Contacto</a>
-            </li>
-          </ul>
-        </nav>
+<html lang="es">
+<head>
+  <!-- ========== HEAD ========== -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Sabores | Barillate</title>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"/>
+  <link rel="stylesheet" href="assets/css/main.css" />
+</head>
+<body>
+
+<!-- ========== NAVBAR (mismo del resto) ========== -->
+<header class="py-3 header-bg animated fadeInDown">
+  <div class="container d-flex flex-wrap justify-content-between align-items-center">
+    <h1 class="header-title pulse mb-0">Barillate</h1>
+    <nav>
+      <ul class="nav">
+        <li class="nav-item"><a class="nav-link text-warning" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link text-warning active" href="sabores.html">Sabores</a></li>
+        <li class="nav-item"><a class="nav-link text-warning" href="tiendas.html">Tiendas</a></li>
+        <li class="nav-item"><a class="nav-link text-warning" href="sobrenosotros.html">Nosotros</a></li>
+        <li class="nav-item"><a class="nav-link text-warning" href="contacto.html">Contacto</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<!-- ========== HERO ========== -->
+<section class="hero-sabores d-flex flex-column justify-content-center text-center text-white">
+  <div class="container">
+    <h2 class="display-4 mb-2 fadeInDown">Más de 100 sabores</h2>
+    <p class="lead mb-4">Clásicos, especiales y opciones veganas para todos los gustos</p>
+    <a href="#tabsSabores" class="btn btn-warning fw-bold">Ver catálogo</a>
+  </div>
+</section>
+
+<!-- ========== MAIN ========== -->
+<main class="container py-5 animated fadeInUp">
+
+  <!-- FILTRO búsqueda -->
+  <div class="row justify-content-center mb-4">
+    <div class="col-12 col-md-6">
+      <input id="searchInput" type="text" class="form-control"
+             placeholder="Buscar sabor…" />
+    </div>
+  </div>
+
+  <!-- TABS de categoría -->
+  <ul class="nav nav-pills justify-content-center mb-4" id="tabsSabores" role="tablist">
+    <li class="nav-item" role="presentation">
+      <button class="nav-link active" data-bs-toggle="pill" data-bs-target="#clasicos" type="button">Clásicos</button>
+    </li>
+    <li class="nav-item" role="presentation">
+      <button class="nav-link" data-bs-toggle="pill" data-bs-target="#especiales" type="button">Especiales</button>
+    </li>
+    <li class="nav-item" role="presentation">
+      <button class="nav-link" data-bs-toggle="pill" data-bs-target="#veganos" type="button">Veganos</button>
+    </li>
+  </ul>
+
+  <div class="tab-content">
+
+    <!-- === CLÁSICOS === -->
+    <div class="tab-pane fade show active" id="clasicos">
+      <div class="grid-4 grid-2" id="gridClasicos">
+        <!-- card -->
+        <figure class="flavour-card p-3 flavour" data-name="chocolate">
+          <img src="assets/img/chocolate.jpg" class="img-fluid rounded" alt="Chocolate">
+          <figcaption class="mt-2 text-center">Chocolate Belga</figcaption>
+        </figure>
+
+        <figure class="flavour-card p-3 flavour" data-name="vainilla">
+          <img src="assets/img/vainilla.jpg" class="img-fluid rounded" alt="Vainilla">
+          <figcaption class="mt-2 text-center">Vainilla Bourbon</figcaption>
+        </figure>
+
       </div>
-    </header>
+    </div>
 
-    <!-- =================================================== -->
-    <!-- Inicio contenido principal -->
-    <!-- =================================================== -->
-    <main class="container mt-5 animated fadeInUp">
-      <h2 class="text-center mb-4">Sabores</h2>
-      <p class="text-center">
-        En Barillate tenemos una gran variedad de sabores para que disfrutes de la mejor experiencia.
-      </p>
-      <div class="row justify-content-center">
-        <div class="col-12 col-md-8">
-          <ul>
-            <li>Chocolate</li>
-            <li>Vainilla</li>
-            <li>Fresa</li>
-            <li>Limón</li>
-            <li>Chicle</li>
-            <li>Plátano</li>
-            <li>Uva</li>
-            <li>Manzana</li>
-            <li>Frutas del bosque</li>
-            <li>Café</li>
-          </ul>
-        </div>
+    <!-- === ESPECIALES === -->
+    <div class="tab-pane fade" id="especiales">
+      <div class="grid-4 grid-2">
+        <figure class="flavour-card p-3 flavour" data-name="cookies">
+          <img src="assets/img/cookies.jpg" class="img-fluid rounded" alt="Cookies">
+          <figcaption class="mt-2 text-center">Cookies & Cream</figcaption>
+        </figure>
+
+        <figure class="flavour-card p-3 flavour" data-name="cheesecake">
+          <img src="assets/img/cheesecake.png" class="img-fluid rounded" alt="Cheesecake">
+          <figcaption class="mt-2 text-center">Cheesecake berries</figcaption>
+        </figure>
+
       </div>
-    </main>
+    </div>
 
-    <!-- =================================================== -->
-    <!-- Footer  -->
-    <!-- =================================================== -->
-    <footer class="bg-light text-center py-3 mt-4">
-      <p>Barillate - Todos los derechos reservados</p>
-    </footer>
+    <!-- === VEGANOS === -->
+    <div class="tab-pane fade" id="veganos">
+      <div class="grid-4 grid-2">
+        <figure class="flavour-card p-3 flavour" data-name="mango">
+          <img src="assets/img/mango.png" class="img-fluid rounded" alt="Mango vegano">
+          <figcaption class="mt-2 text-center">Mango & Maracuyá</figcaption>
+        </figure>
 
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-  </body>
+        <figure class="flavour-card p-3 flavour" data-name="limon">
+          <img src="assets/img/limon.png" class="img-fluid rounded" alt="Limón">
+          <figcaption class="mt-2 text-center">Limón siciliano</figcaption>
+        </figure>
+      </div>
+    </div>
+
+  </div>
+</main>
+
+<!-- ========== FOOTER + TOP ========== -->
+<footer class="footer-bg text-center text-white py-4 position-relative">
+  <p class="small mb-0">&copy; 2025 Barillate — Todos los derechos reservados</p>
+  <button id="btnTop" class="btn btn-warning rounded-circle position-absolute end-0 me-3"
+          style="bottom:1rem;display:none">↑</button>
+</footer>
+
+<!-- ========== JS ========== -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  /* --- filtro live --- */
+  const input = document.getElementById('searchInput');
+  input?.addEventListener('input', e=>{
+    const term = e.target.value.toLowerCase();
+    document.querySelectorAll('.flavour').forEach(card=>{
+      card.style.display = card.dataset.name.includes(term) ? 'block' : 'none';
+    });
+  });
+
+  /* --- back-to-top --- */
+  const topBtn = document.getElementById('btnTop');
+  window.addEventListener('scroll', ()=> topBtn.style.display = scrollY>400?'block':'none');
+  topBtn.addEventListener('click', ()=> scrollTo({top:0,behavior:'smooth'}));
+</script>
+
+<style>
+/* overlay al hacer hover en cards */
+.flavour-card{position:relative;overflow:hidden}
+.flavour-card img{transition:transform .4s}
+.flavour-card:hover img{transform:scale(1.1)}
+.flavour-card::after{
+  content:"Detalles";position:absolute;inset:0;display:flex;justify-content:center;align-items:center;
+  background:rgba(0,0,0,.45);color:#fff;opacity:0;transition:opacity .3s;font-size:.9rem
+}
+.flavour-card:hover::after{opacity:1}
+.hero-sabores{
+  background:url("assets/img/hero-flavours.jpg") center/cover no-repeat;
+  position:relative;color:#fff;min-height:50vh
+}
+.hero-sabores::before{
+  content:"";position:absolute;inset:0;background:linear-gradient(to bottom,rgba(0,0,0,.3),rgba(0,0,0,.7))
+}
+.hero-sabores>*{position:relative;z-index:1}
+</style>
+</body>
 </html>

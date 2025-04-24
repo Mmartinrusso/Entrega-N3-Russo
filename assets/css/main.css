@@ -1,201 +1,74 @@
-@charset "UTF-8";
-* {
-  box-sizing: border-box;
+/* ======== RESET ======== */
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;overflow-x:hidden;font-family:Arial,sans-serif;background:rgb(236,236,235)}
+
+/* ======== VARIABLES COMPILADAS ======== */
+:root{
+ --primary:#c03333;
+ --secondary:rgb(233,197,37);
+ --bg:rgb(236,236,235)
 }
 
-html,
-body {
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden;
-  font-family: Arial, sans-serif;
-  background-color: rgb(236, 236, 235);
-}
+/* ======== NAVBAR / HEADER ======== */
+header{background:var(--primary);padding:.75rem;position:sticky;top:0;z-index:1000}
+.header-title{color:var(--secondary);font-size:2rem;margin:0}
+.nav-link{color:var(--secondary);text-decoration:none;transition:color .3s}
+.nav-link:hover{color:rgb(198,166,20)}
+.nav-link.active,.nav-link:focus{background:var(--primary);color:var(--secondary)}
 
-header {
-  background-color: #c03333;
-  padding: 10px;
-  text-align: center;
-  transition: background-color 0.5s ease-in-out;
-}
-header .header-title {
-  color: rgb(233, 197, 37);
-  font-size: 2rem;
-  margin-bottom: 20px;
-}
+/* ======== HERO ======== */
+.hero{min-height:60vh;display:flex;justify-content:center;align-items:center;text-align:center;background:url("../img/hero-bg.jpg") center/cover no-repeat;position:relative;color:#fff}
+.hero::before{content:"";position:absolute;inset:0;background:linear-gradient(to bottom,rgba(0,0,0,.4),rgba(0,0,0,.7));z-index:0}
+.hero>*{position:relative;z-index:1}
 
-.nav {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-.nav-item {
-  margin: 0 15px;
-  display: inline-block;
-}
-.nav-link {
-  color: rgb(233, 197, 37);
-  text-decoration: none;
-  transition: color 0.3s ease-in-out;
-}
-.nav-link:hover {
-  color: rgb(198.925, 166.075, 20.075);
-}
-.nav-link.active, .nav-link:focus {
-  background-color: #c03333;
-  color: rgb(233, 197, 37);
-}
+/* ======== CARDS & GRID ======== */
+.flavour-card,.sucursal-card{background:var(--primary);color:var(--secondary);border:2px solid var(--secondary);border-radius:.65rem;transition:transform .3s}
+.flavour-card:hover,.sucursal-card:hover{transform:translateY(-4px)}
+.grid-4{display:grid;grid-template-columns:1fr;gap:1rem}
+@media (min-width:576px){.grid-4{grid-template-columns:repeat(2,1fr)}}
+@media (min-width:992px){.grid-4{grid-template-columns:repeat(4,1fr);gap:1.5rem}}
+.grid-2{display:grid;grid-template-columns:repeat(2,1fr);gap:.75rem}
 
-main {
-  margin-top: 50px;
-  padding: 0 15px;
-}
+/* ======== FORMULARIO ======== */
+#formulario{background:var(--primary);color:var(--secondary);border-radius:.5rem;padding:1rem;margin-top:1.5rem}
+#formulario input,#formulario select,#formulario textarea{width:100%;padding:.65rem;border:none;border-radius:.4rem;margin-bottom:.75rem}
+#formulario input[type=submit]{background:var(--secondary);color:var(--primary);font-weight:700;cursor:pointer}
 
-footer {
-  background-color: white;
-  text-align: center;
-  padding: 10px;
-  margin-top: 40px;
-}
+/* ======== STATS BOX (contador) ======== */
+.stat-box{display:flex;flex-direction:column;align-items:center;gap:.25rem}
+.stat-box span{color:var(--primary)}
 
-#formulario {
-  background-color: #c03333;
-  color: rgb(233, 197, 37);
-  text-align: left;
-  font-size: 16px;
-  padding: 15px;
-  border-radius: 5px;
-  margin-top: 20px;
-}
-#formulario input,
-#formulario select,
-#formulario textarea {
-  margin-bottom: 10px;
-  display: block;
-  width: 100%;
-  padding: 10px;
-  border-radius: 5px;
-  border: none;
-}
-#formulario input[type=submit],
-#formulario button {
-  background-color: rgb(233, 197, 37);
-  color: #c03333;
-  font-weight: bold;
-  cursor: pointer;
-}
-#formulario label {
-  margin-bottom: 5px;
-  display: inline-block;
-  font-weight: bold;
-}
+/* ======== TIMELINE ======== */
+.timeline{border-left:4px solid var(--secondary);padding-left:1rem}
+.timeline li{position:relative;margin-bottom:1rem}
+.timeline li::before{content:"";position:absolute;left:-8px;top:.2rem;width:.75rem;height:.75rem;border-radius:50%;background:var(--secondary)}
 
-.caja {
-  background-color: #c03333;
-  color: rgb(233, 197, 37);
-  padding: 10px;
-  text-align: center;
-  font-size: 20px;
-  width: 50%;
-  height: 50vh;
-  border: 2px solid rgb(233, 197, 37);
-  margin: 10px;
-}
+/* ======== FOOTER ======== */
+.footer-bg{background:var(--primary)}
+footer p{margin:0;color:#fff}
 
-.container-flex {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-}
+/* ======== BACK-TO-TOP BUTTON ======== */
+#btnTop{width:40px;height:40px;padding:0;line-height:40px;font-weight:700}
 
-@keyframes fadeInDown {
-  from {
-    opacity: 0;
-    transform: translateY(-20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-@keyframes zoomIn {
-  from {
-    opacity: 0;
-    transform: scale(0.8);
-  }
-  to {
-    opacity: 1;
-    transform: scale(1);
-  }
-}
-@keyframes rotateIn {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-@keyframes textPulse {
-  0% {
-    transform: scale(1);
-    text-shadow: none;
-  }
-  50% {
-    transform: scale(1.05);
-    text-shadow: 0 0 10px rgb(233, 197, 37);
-  }
-  100% {
-    transform: scale(1);
-    text-shadow: none;
-  }
-}
-/* Clases de utilidad para animaciones */
-.animated {
-  animation-duration: 0.8s;
-  animation-fill-mode: both;
-}
+/* ======== ANIMATIONS ======== */
+@keyframes fadeInDown{from{opacity:0;transform:translateY(-20px)}to{opacity:1;transform:translateY(0)}}
+@keyframes fadeInUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+@keyframes zoomIn{from{opacity:0;transform:scale(.8)}to{opacity:1;transform:scale(1)}}
+@keyframes rotateIn{from{transform:rotate(0)}to{transform:rotate(360deg)}}
+@keyframes textPulse{0%{transform:scale(1);text-shadow:none}50%{transform:scale(1.05);text-shadow:0 0 10px var(--secondary)}100%{transform:scale(1);text-shadow:none}}
+.animated{animation-duration:.8s;animation-fill-mode:both}
+.fadeInDown{animation-name:fadeInDown}
+.fadeInUp{animation-name:fadeInUp}
+.zoomIn{animation-name:zoomIn}
+.rotate{animation:rotateIn 3s linear infinite}
+.pulse{animation:textPulse 2s infinite}
 
-.fadeInDown {
-  animation-name: fadeInDown;
+/* ======== MEDIA QUERIES GENERAL ======== */
+@media (max-width:768px){
+  h1{font-size:1.5rem}
+  main{margin-top:2rem;padding-inline:1rem}
 }
-
-.fadeInUp {
-  animation-name: fadeInUp;
+@media (min-width:992px){
+  .hero{min-height:100vh}
+  main{margin-top:4rem;padding-inline:2rem}
 }
-
-.zoomIn {
-  animation-name: zoomIn;
-}
-
-/* Clase para rotar imágenes continuamente */
-.rotate {
-  animation: rotateIn 3s linear infinite;
-}
-
-/* Clase para aplicar efecto pulse al texto */
-.pulse {
-  animation: textPulse 2s infinite;
-}
-
-@media (max-width: 768px) {
-  h1 {
-    font-size: 1.5rem;
-  }
-  main {
-    margin-top: 30px;
-  }
-}
-
-/*# sourceMappingURL=main.css.map */

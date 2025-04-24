@@ -1,80 +1,205 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
-    <!-- =================================================== -->
-    <!-- Inicio del (Head) -->
-    <!-- =================================================== -->
+    <!-- ================= HEAD ================= -->
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tiendas | Barillate</title>
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" />
-    <!-- Hoja de estilos generada desde SCSS -->
-    <link rel="stylesheet" href="assets/css/main.css" />
-  </head>
-  <body>
-    <!-- =================================================== -->
-    <!-- Inicio del NAVBAR  -->
-    <!-- =================================================== -->
-    <header class="py-3 header-bg animated fadeInDown">
-      <div class="container">
-        <h1 class="text-center header-title pulse">Barillate</h1>
-        <nav>
-          <ul class="nav justify-content-center">
-            <li class="nav-item">
-              <a class="nav-link text-warning" href="index.html">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link text-warning" href="sabores.html">Sabores</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link text-warning active" href="tiendas.html">Tiendas</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link text-warning" href="sobrenosotros.html">Sobre Nosotros</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link text-warning" href="contacto.html">Contacto</a>
-            </li>
-          </ul>
-        </nav>
-      </div>
-    </header>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Sucursales | Barillate</title>
 
-    <!-- =================================================== -->
-    <!-- Inicio contenido principal -->
-    <!-- =================================================== -->
-    <main class="container mt-5 animated fadeInUp">
-      <h2 class="text-center mb-4">Nuestras Sucursales</h2>
-      <p class="text-center">
-        Encontranos en estos distintos locales por todo Argentina:
-      </p>
-      <div class="row justify-content-center">
-        <div class="col-12 col-md-6">
-          <ul>
-            <li>Barillate Carlos Paz</li>
-            <li>Barillate Palermo</li>
-            <li>Barillate Recoleta</li>
-            <li>Barillate Caballito</li>
-            <li>Barillate Villa Allende</li>
-            <li>Barillate La Plata</li>
-            <li>Barillate Rosario</li>
-            <li>Barillate Córdoba</li>
-            <li>Barillate Mendoza</li>
-            <li>Barillate Mar del Plata</li>
-          </ul>
+    <!-- Bootstrap & icons -->
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"/>
+
+    <!-- CSS propio -->
+    <link rel="stylesheet" href="assets/css/main.css"/>
+  </head>
+
+  <body>
+  <!-- ================= NAVBAR ================= -->
+  <header class="py-3 header-bg animated fadeInDown">
+    <div class="container d-flex flex-wrap justify-content-between align-items-center">
+      <h1 class="header-title pulse mb-0">Barillate</h1>
+      <nav>
+        <ul class="nav">
+          <li class="nav-item"><a class="nav-link text-warning" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link text-warning" href="sabores.html">Sabores</a></li>
+          <li class="nav-item"><a class="nav-link text-warning active" href="tiendas.html">Tiendas</a></li>
+          <li class="nav-item"><a class="nav-link text-warning" href="sobrenosotros.html">Nosotros</a></li>
+          <li class="nav-item"><a class="nav-link text-warning" href="contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ================= HERO TEXTO ================= -->
+  <section class="d-flex flex-column justify-content-center align-items-center text-center hero"
+           style="min-height:45vh;background:var(--primary);color:var(--secondary)">
+    <div>
+      <h2 class="display-4 mb-2">¡Estamos cerca tuyo!</h2>
+      <p>Conocé todas nuestras sucursales y horarios.</p>
+      <a href="#buscador" class="btn btn-warning fw-bold">Buscar sucursal</a>
+    </div>
+  </section>
+
+  <!-- ================= MAIN ================= -->
+  <main class="container py-5 animated fadeInUp">
+
+    <!-- Buscador -->
+    <div class="row justify-content-center mb-4" id="buscador">
+      <div class="col-12 col-md-6">
+        <input id="searchInput" type="text" class="form-control"
+               placeholder="Buscar por ciudad o barrio…" />
+      </div>
+    </div>
+
+    <!-- Accordion provincias -->
+    <h3 class="text-center mb-4">Sucursales por provincia</h3>
+    <div class="accordion accordion-flush mb-5" id="provAcc">
+
+      <!-- CÓRDOBA -->
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#cordoba">
+            Córdoba
+          </button>
+        </h2>
+        <div id="cordoba" class="accordion-collapse collapse show"
+             data-bs-parent="#provAcc">
+          <div class="accordion-body">
+            <div class="row g-4" id="listCordoba">
+              <div class="col-md-6">
+                <article class="sucursal-card p-3 flavour"
+                         data-name="carlos paz cordoba">
+                  <h4 class="h6 mb-1"><i class="bi bi-geo-alt-fill"></i> Carlos&nbsp;Paz</h4>
+                  <p class="mb-1 small">Av. Libertad 123 – 10 a 23 h</p>
+                  <a href="https://maps.google.com/?q=-31.424, -64.497"
+                     target="_blank" class="link-warning small">Ver mapa</a>
+                </article>
+              </div>
+
+              <div class="col-md-6">
+                <article class="sucursal-card p-3 flavour"
+                         data-name="villa allende cordoba">
+                  <h4 class="h6 mb-1"><i class="bi bi-geo-alt-fill"></i> Villa Allende</h4>
+                  <p class="mb-1 small">Av. Goycoechea 321 – 12 a 22 h</p>
+                  <a href="https://maps.google.com/?q=-31.292,-64.298"
+                     target="_blank" class="link-warning small">Ver mapa</a>
+                </article>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-    </main>
 
-    <!-- =================================================== -->
-    <!-- Footer  -->
-    <!-- =================================================== -->
-    <footer class="bg-light text-center py-3 mt-4">
-      <p>Barillate - Todos los derechos reservados</p>
-    </footer>
+      <!-- BUENOS AIRES -->
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#bsas">
+            Buenos Aires
+          </button>
+        </h2>
+        <div id="bsas" class="accordion-collapse collapse" data-bs-parent="#provAcc">
+          <div class="accordion-body">
+            <div class="row g-4" id="listBsas">
+              <div class="col-md-6">
+                <article class="sucursal-card p-3 flavour"
+                         data-name="palermo buenos aires">
+                  <h4 class="h6 mb-1"><i class="bi bi-geo-alt-fill"></i> Palermo</h4>
+                  <p class="mb-1 small">J.L. Borges 2100 – 11 a 23 h</p>
+                  <a href="https://maps.google.com/?q=-34.586,-58.430"
+                     target="_blank" class="link-warning small">Ver mapa</a>
+                </article>
+              </div>
 
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-  </body>
+              <div class="col-md-6">
+                <article class="sucursal-card p-3 flavour"
+                         data-name="recoleta buenos aires">
+                  <h4 class="h6 mb-1"><i class="bi bi-geo-alt-fill"></i> Recoleta</h4>
+                  <p class="mb-1 small">Av. Callao 1100 – 12 a 22 h</p>
+                  <a href="https://maps.google.com/?q=-34.587,-58.392"
+                     target="_blank" class="link-warning small">Ver mapa</a>
+                </article>
+              </div>
+
+              <div class="col-md-6">
+                <article class="sucursal-card p-3 flavour"
+                         data-name="caballito buenos aires">
+                  <h4 class="h6 mb-1"><i class="bi bi-geo-alt-fill"></i> Caballito</h4>
+                  <p class="mb-1 small">Rivadavia 5100 – 10 a 22 h</p>
+                  <a href="https://maps.google.com/?q=-34.618,-58.444"
+                     target="_blank" class="link-warning small">Ver mapa</a>
+                </article>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SANTA FE -->
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#rosario">
+            Santa Fe
+          </button>
+        </h2>
+        <div id="rosario" class="accordion-collapse collapse" data-bs-parent="#provAcc">
+          <div class="accordion-body">
+            <div class="row g-4" id="listRosario">
+              <div class="col-md-6">
+                <article class="sucursal-card p-3 flavour"
+                         data-name="rosario santa fe">
+                  <h4 class="h6 mb-1"><i class="bi bi-geo-alt-fill"></i> Rosario</h4>
+                  <p class="mb-1 small">Bv. Oroño 500 – 11 a 23 h</p>
+                  <a href="https://maps.google.com/?q=-32.955,-60.641"
+                     target="_blank" class="link-warning small">Ver mapa</a>
+                </article>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div> <!-- /accordion -->
+
+    <!-- Mapa global -->
+    <h3 class="text-center mb-3">Mapa general</h3>
+    <div class="ratio ratio-16x9 mb-5">
+      <iframe src="https://maps.google.com/maps?q=Argentina&z=4&output=embed"
+              title="Mapa sucursales"></iframe>
+    </div>
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="footer-bg text-center text-white py-4 position-relative">
+    <p class="small mb-0">&copy; 2025 Barillate — Todos los derechos reservados</p>
+    <button id="btnTop" class="btn btn-warning rounded-circle position-absolute end-0 me-3"
+            style="bottom:1rem;display:none">↑</button>
+  </footer>
+
+  <!-- ================= JS ================= -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    /* Filtro live */
+    const input = document.getElementById('searchInput');
+    input?.addEventListener('input', e=>{
+      const term = e.target.value.toLowerCase();
+      document.querySelectorAll('.flavour').forEach(card=>{
+        card.style.display = card.dataset.name.includes(term) ? 'block' : 'none';
+      });
+    });
+
+    /* Top button */
+    const topBtn = document.getElementById('btnTop');
+    window.addEventListener('scroll', ()=> topBtn.style.display = scrollY>400?'block':'none');
+    topBtn.addEventListener('click', ()=> scrollTo({top:0,behavior:'smooth'}));
+  </script>
+
+  <!-- Extra CSS puntual (sin imágenes) -->
+  <style>
+    .hero{background:var(--primary);color:var(--secondary)}
+    .sucursal-card i{color:var(--secondary);margin-right:.25rem}
+  </style>
+</body>
 </html>

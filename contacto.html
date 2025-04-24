@@ -1,110 +1,177 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <!-- =================================================== -->
-    <!-- Inicio del (Head) -->
-    <!-- =================================================== -->
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Contacto | Barillate</title>
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" />
-    <!-- Hoja de estilos generada desde SCSS -->
-    <link rel="stylesheet" href="assets/css/main.css" />
-  </head>
-  <body>
-    <!-- =================================================== -->
-    <!-- Inicio del NAVBAR -->
-    <!-- =================================================== -->
-    <header class="py-3 header-bg animated fadeInDown">
-      <div class="container">
-        <h1 class="text-center header-title pulse">Barillate</h1>
-        <nav>
-          <ul class="nav justify-content-center">
-            <li class="nav-item">
-              <a class="nav-link text-warning" href="index.html">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link text-warning" href="sabores.html">Sabores</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link text-warning" href="tiendas.html">Tiendas</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link text-warning" href="sobrenosotros.html">Sobre Nosotros</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link text-warning active" href="contacto.html">Contacto</a>
-            </li>
-          </ul>
-        </nav>
-      </div>
-    </header>
+<head>
+  <!-- ========== HEAD ========== -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Contacto | Barillate</title>
 
-    <!-- =================================================== -->
-    <!-- Inicio contenidio principal -->
-    <!-- =================================================== -->
-    <main class="container mt-5 animated fadeInUp">
-      <h2 class="text-center mb-3">Contacto</h2>
-      <p>
-        Si deseas ponerte en contacto con nosotros, puedes hacerlo a través de los siguientes medios:
-      </p>
-      <ul>
-        <li>Teléfono: 123456789</li>
-        <li>Correo: barilatte@gmail.com</li>
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"/>
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"/>
+  <link rel="stylesheet" href="assets/css/main.css" />
+</head>
+
+<body>
+<!-- ========== NAVBAR (igual resto) ========== -->
+<header class="py-3 header-bg animated fadeInDown">
+  <div class="container d-flex flex-wrap justify-content-between align-items-center">
+    <h1 class="header-title pulse mb-0">Barillate</h1>
+    <nav>
+      <ul class="nav">
+        <li class="nav-item"><a class="nav-link text-warning" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link text-warning" href="sabores.html">Sabores</a></li>
+        <li class="nav-item"><a class="nav-link text-warning" href="tiendas.html">Tiendas</a></li>
+        <li class="nav-item"><a class="nav-link text-warning" href="sobrenosotros.html">Nosotros</a></li>
+        <li class="nav-item"><a class="nav-link text-warning active" href="contacto.html">Contacto</a></li>
       </ul>
-      <p class="mt-4">
-        Si deseas que nosotros nos contactemos, déjanos tus datos:
-      </p>
-      <div class="row justify-content-center">
-        <div class="col-12 col-md-8 col-lg-6">
-          <!-- =================================================== -->
-          <!-- Inicio formulario -->
-          <!-- =================================================== -->
-          <section id="formulario" class="p-3 rounded animated fadeIn">
-            <form action="enviar.php" method="post">
-              <div class="mb-3">
-                <label for="nombre" class="form-label">Nombre:</label>
-                <input type="text" id="nombre" name="nombre" class="form-control" />
-              </div>
-              <div class="mb-3">
-                <label for="correo" class="form-label">Correo:</label>
-                <input type="email" id="correo" name="correo" class="form-control" />
-              </div>
-              <div class="mb-3">
-                <label for="telefono" class="form-label">Teléfono:</label>
-                <input type="tel" id="telefono" name="telefono" class="form-control" />
-              </div>
-              <div class="mb-3">
-                <label for="Provincia" class="form-label">Provincia:</label>
-                <select name="Provincia" id="Provincia" class="form-select">
-                  <option value="Buenos Aires">Buenos Aires</option>
-                  <option value="Mendoza">Mendoza</option>
-                  <option value="Cordoba">Córdoba</option>
-                </select>
-              </div>
-              <div class="mb-3">
-                <label for="mensaje" class="form-label">Mensaje:</label>
-                <textarea id="mensaje" name="mensaje" class="form-control" rows="3"></textarea>
-              </div>
-              <input type="submit" value="Enviar" class="btn btn-warning w-100 fw-bold" />
-            </form>
-          </section>
-          <!-- =================================================== -->
-          <!-- Fin formulario -->
-          <!-- =================================================== -->
+    </nav>
+  </div>
+</header>
+
+<!-- ========== HERO ========== -->
+<section class="d-flex flex-column justify-content-center align-items-center text-center hero"
+         style="min-height:45vh;background:var(--primary);color:var(--secondary)">
+  <div>
+    <h2 class="display-4 mb-2">Hablemos</h2>
+    <p class="lead">Tu opinión nos importa. ¡Escríbenos!</p>
+  </div>
+</section>
+
+<!-- ========== MAIN ========== -->
+<main class="container py-5 animated fadeInUp">
+
+  <!-- Tarjetas de contacto rápido -->
+  <div class="row text-center gy-4 mb-5">
+    <div class="col-12 col-md-4">
+      <article class="flavour-card p-4 h-100">
+        <i class="bi bi-telephone-fill fs-3"></i>
+        <p class="mb-1 fw-bold">Llámanos</p>
+        <span class="small">+54 9 351-123-456</span>
+      </article>
+    </div>
+    <div class="col-12 col-md-4">
+      <article class="flavour-card p-4 h-100">
+        <i class="bi bi-envelope-fill fs-3"></i>
+        <p class="mb-1 fw-bold">Escríbenos</p>
+        <span class="small">hola@barillate.com</span>
+      </article>
+    </div>
+    <div class="col-12 col-md-4">
+      <article class="flavour-card p-4 h-100">
+        <i class="bi bi-clock-fill fs-3"></i>
+        <p class="mb-1 fw-bold">Horario</p>
+        <span class="small">L-D &nbsp;10:00 – 23:00</span>
+      </article>
+    </div>
+  </div>
+
+  <!-- Formulario -->
+  <div class="row justify-content-center mb-5">
+    <div class="col-12 col-lg-6">
+      <section id="formulario" class="p-4 rounded">
+        <form class="needs-validation" novalidate>
+          <div class="mb-3">
+            <label for="nombre" class="form-label">Nombre</label>
+            <input type="text" id="nombre" class="form-control" required />
+            <div class="invalid-feedback">Ingresa tu nombre.</div>
+          </div>
+
+          <div class="mb-3">
+            <label for="correo" class="form-label">Correo electrónico</label>
+            <input type="email" id="correo" class="form-control" required />
+            <div class="invalid-feedback">Correo no válido.</div>
+          </div>
+
+          <div class="mb-3">
+            <label for="telefono" class="form-label">Teléfono (opcional)</label>
+            <input type="tel" id="telefono" class="form-control" />
+          </div>
+
+          <div class="mb-3">
+            <label for="provincia" class="form-label">Provincia</label>
+            <select id="provincia" class="form-select" required>
+              <option value="">Seleccionar…</option>
+              <option>Buenos Aires</option><option>Córdoba</option><option>Mendoza</option>
+            </select>
+            <div class="invalid-feedback">Selecciona una provincia.</div>
+          </div>
+
+          <div class="mb-3">
+            <label for="mensaje" class="form-label">Mensaje</label>
+            <textarea id="mensaje" rows="3" class="form-control" required></textarea>
+            <div class="invalid-feedback">Cuéntanos en qué podemos ayudarte.</div>
+          </div>
+
+          <button class="btn btn-warning w-100 fw-bold">Enviar</button>
+        </form>
+      </section>
+    </div>
+  </div>
+
+  <!-- FAQ -->  
+  <section class="mb-5">
+    <h3 class="text-center mb-4">Preguntas frecuentes</h3>
+    <div class="accordion accordion-flush" id="faqAcc">
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#f1">
+            ¿Realizan envíos a domicilio?
+          </button>
+        </h2>
+        <div id="f1" class="accordion-collapse collapse show" data-bs-parent="#faqAcc">
+          <div class="accordion-body small">
+            Sí, a través de apps de delivery en todas las sucursales.
+          </div>
         </div>
       </div>
-    </main>
 
-    <!-- =================================================== -->
-    <!-- Footer -->
-    <!-- =================================================== -->
-    <footer class="bg-light text-center py-3 mt-4">
-      <p>Barillate - Todos los derechos reservados</p>
-    </footer>
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#f2">
+            ¿Hay opciones sin azúcar?
+          </button>
+        </h2>
+        <div id="f2" class="accordion-collapse collapse" data-bs-parent="#faqAcc">
+          <div class="accordion-body small">
+            Contamos con línea keto y helados endulzados con stevia.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-  </body>
+  <!-- Mapa -->
+  <h3 class="text-center mb-3">Casa central</h3>
+  <div class="ratio ratio-16x9">
+    <iframe src="https://maps.google.com/maps?q=-31.417,-64.183&z=15&output=embed"
+            title="Mapa Barillate"></iframe>
+  </div>
+</main>
+
+<!-- ========== FOOTER & TOP ========== -->
+<footer class="footer-bg text-center text-white py-4 position-relative">
+  <p class="small mb-0">&copy; 2025 Barillate — Todos los derechos reservados</p>
+  <button id="btnTop" class="btn btn-warning rounded-circle position-absolute end-0 me-3"
+          style="bottom:1rem;display:none">↑</button>
+</footer>
+
+<!-- ========== JS ========== -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  /* Validación Bootstrap */
+  (()=>{const forms=document.querySelectorAll('.needs-validation');
+    forms.forEach(f=>f.addEventListener('submit',e=>{
+      if(!f.checkValidity()){e.preventDefault();e.stopPropagation();}
+      f.classList.add('was-validated');
+    },false));
+  })();
+
+  /* Back-to-top */
+  const topBtn=document.getElementById('btnTop');
+  window.addEventListener('scroll',()=>topBtn.style.display=scrollY>400?'block':'none');
+  topBtn.addEventListener('click',()=>scrollTo({top:0,behavior:'smooth'}));
+</script>
+</body>
 </html>

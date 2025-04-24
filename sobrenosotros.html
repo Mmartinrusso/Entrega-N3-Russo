@@ -1,69 +1,201 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <!-- =================================================== -->
-    <!-- Inicio del (Head)-->
-    <!-- =================================================== -->
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sobre Nosotros | Barillate</title>
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" />
-    <!-- Hoja de estilos generada desde SCSS -->
-    <link rel="stylesheet" href="assets/css/main.css" />
-  </head>
-  <body>
-    <!-- =================================================== -->
-    <!-- Inicio del NAVBAR  -->
-    <!-- =================================================== -->
-    <header class="py-3 header-bg animated fadeInDown">
-      <div class="container">
-        <h1 class="text-center header-title pulse">Barillate</h1>
-        <nav>
-          <ul class="nav justify-content-center">
-            <li class="nav-item">
-              <a class="nav-link text-warning" href="index.html">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link text-warning" href="sabores.html">Sabores</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link text-warning" href="tiendas.html">Tiendas</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link text-warning active" href="sobrenosotros.html">Sobre Nosotros</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link text-warning" href="contacto.html">Contacto</a>
-            </li>
-          </ul>
-        </nav>
-      </div>
-    </header>
+<html lang="es">
+<head>
+  <!-- ========== HEAD ========== -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Sobre nosotros | Barillate</title>
 
-    <!-- =================================================== -->
-    <!--Inicio contenido principal-->
-    <!-- =================================================== -->
-    <main class="container mt-5 animated fadeInUp">
-      <h2 class="text-center mb-4">Sobre Nosotros</h2>
-      <div class="row">
-        <div class="col-12 col-md-8 offset-md-2">
-          <p>
-            Barillate es una empresa dedicada a la producción de helados de alta calidad. Nuestros helados son elaborados con ingredientes naturales y de la mejor calidad. En Barillate nos esforzamos por ofrecer a nuestros clientes una experiencia inigualable.
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"/>
+  <link rel="stylesheet" href="assets/css/main.css" />
+</head>
+
+<body>
+<!-- ================= NAVBAR (igual al resto) ================= -->
+<header class="py-3 header-bg animated fadeInDown">
+  <div class="container d-flex flex-wrap justify-content-between align-items-center">
+    <h1 class="header-title pulse mb-0">Barillate</h1>
+    <nav>
+      <ul class="nav">
+        <li class="nav-item"><a class="nav-link text-warning" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link text-warning" href="sabores.html">Sabores</a></li>
+        <li class="nav-item"><a class="nav-link text-warning" href="tiendas.html">Tiendas</a></li>
+        <li class="nav-item"><a class="nav-link text-warning active" href="sobrenosotros.html">Nosotros</a></li>
+        <li class="nav-item"><a class="nav-link text-warning" href="contacto.html">Contacto</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<!-- ================= HERO (texto + background primario) ================= -->
+<section class="d-flex flex-column justify-content-center align-items-center text-center hero"
+         style="min-height:45vh;background:var(--primary);color:var(--secondary)">
+  <div>
+    <h2 class="display-4 mb-2">25&nbsp;años de pasión heladera</h2>
+    <p>Una historia de sabor, innovación y tradición familiar.</p>
+  </div>
+</section>
+
+<!-- ================= MAIN ================= -->
+<main class="container py-5 animated fadeInUp">
+
+  <!-- 1 · Misión, Visión, Valores (cards) -->
+  <section class="mb-5">
+    <h3 class="text-center mb-4">Nuestra esencia</h3>
+    <div class="row g-4">
+      <div class="col-md-4">
+        <article class="flavour-card p-4 text-center h-100">
+          <h4 class="h5 mb-3">Misión</h4>
+          <p class="small mb-0">
+            Sorprender a cada cliente con un helado <strong>auténtico</strong>
+            elaborado con materias primas naturales y procesos artesanales.
           </p>
-          <img src="assets/img/JFZ1276-scaled.jpg" alt="Sucursal Barilatte" class="img-fluid rounded animated zoomIn" sizes="(max-width: 768px) 100vw, 50vw" srcset="assets/img/JFZ1276-scaled.jpg 768w, assets/img/JFZ1276-scaled.jpg 1536w" />
+        </article>
+      </div>
+      <div class="col-md-4">
+        <article class="flavour-card p-4 text-center h-100">
+          <h4 class="h5 mb-3">Visión</h4>
+          <p class="small mb-0">
+            Ser la marca de helados artesanales <strong>referente</strong> en Argentina
+            y Latinoamérica, reconocida por su innovación y calidad.
+          </p>
+        </article>
+      </div>
+      <div class="col-md-4">
+        <article class="flavour-card p-4 text-center h-100">
+          <h4 class="h5 mb-3">Valores</h4>
+          <p class="small mb-0">
+            Pasión, honestidad, compromiso con el <strong>medio ambiente</strong>
+            y amor por los sabores auténticos.
+          </p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2 · Timeline de hitos -->
+  <section class="mb-5">
+    <h3 class="text-center mb-4">Nuestra historia</h3>
+    <ul class="timeline list-unstyled">
+      <li>
+        <span class="badge bg-warning text-dark">1998</span>
+        <p class="d-inline ms-2">Apertura del primer local en Córdoba capital.</p>
+      </li>
+      <li>
+        <span class="badge bg-warning text-dark">2007</span>
+        <p class="d-inline ms-2">Lanzamos el mítico sabor <em>Dulce de leche granizado</em>.</p>
+      </li>
+      <li>
+        <span class="badge bg-warning text-dark">2015</span>
+        <p class="d-inline ms-2">Incorporamos línea vegana y sin gluten.</p>
+      </li>
+      <li>
+        <span class="badge bg-warning text-dark">2024</span>
+        <p class="d-inline ms-2">26 sucursales en 5 provincias y premiados a nivel nacional.</p>
+      </li>
+    </ul>
+  </section>
+
+  <!-- 3 · Equipo (accordion) -->
+  <section class="mb-5">
+    <h3 class="text-center mb-4">Conocé al equipo</h3>
+    <div class="accordion accordion-flush" id="teamAcc">
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#fundador">
+            Martín Sosa — Fundador & Maestro Heladero
+          </button>
+        </h2>
+        <div id="fundador" class="accordion-collapse collapse show" data-bs-parent="#teamAcc">
+          <div class="accordion-body small">
+            Con más de 30 años en el rubro, Martín es la mente creativa detrás de cada sabor.
+          </div>
         </div>
       </div>
-    </main>
 
-    <!-- =================================================== -->
-    <!-- Footer  -->
-    <!-- =================================================== -->
-    <footer class="bg-light text-center py-3 mt-4">
-      <p>Barillate - Todos los derechos reservados</p>
-    </footer>
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#i+d">
+            Ana Ledesma — I+D Sabores
+          </button>
+        </h2>
+        <div id="i+d" class="accordion-collapse collapse" data-bs-parent="#teamAcc">
+          <div class="accordion-body small">
+            Dirige el laboratorio donde se testean ingredientes locales y tendencias globales.
+          </div>
+        </div>
+      </div>
 
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-  </body>
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#calidad">
+            Lucas Fernández — Calidad & Sustentabilidad
+          </button>
+        </h2>
+        <div id="calidad" class="accordion-collapse collapse" data-bs-parent="#teamAcc">
+          <div class="accordion-body small">
+            Garantiza procesos responsables, energía renovable y embalajes compostables.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4 · Datos rápidos (stats) -->
+  <section class="bg-white py-5">
+    <div class="container">
+      <div class="row text-center gy-4">
+        <div class="col-6 col-md-3">
+          <div class="stat-box">
+            <span class="display-5 fw-bold" data-count="26">0</span>
+            <p class="mb-0 small">Sucursales</p>
+          </div>
+        </div>
+        <div class="col-6 col-md-3">
+          <div class="stat-box">
+            <span class="display-5 fw-bold" data-count="120">0</span>
+            <p class="mb-0 small">Sabores</p>
+          </div>
+        </div>
+        <div class="col-6 col-md-3">
+          <div class="stat-box">
+            <span class="display-5 fw-bold" data-count="1998">0</span>
+            <p class="mb-0 small">Desde</p>
+          </div>
+        </div>
+        <div class="col-6 col-md-3">
+          <div class="stat-box">
+            <span class="display-5 fw-bold" data-count="5">0</span>
+            <p class="mb-0 small">Premios</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- ================= FOOTER ================= -->
+<footer class="footer-bg text-center text-white py-4 position-relative">
+  <p class="small mb-0">&copy; 2025 Barillate — Todos los derechos reservados</p>
+  <button id="btnTop" class="btn btn-warning rounded-circle position-absolute end-0 me-3"
+          style="bottom:1rem;display:none">↑</button>
+</footer>
+
+<!-- ================= JS ================= -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  /* contador animado */
+  document.querySelectorAll('[data-count]').forEach(el=>{
+    const target=+el.dataset.count;let n=0,inc=Math.ceil(target/40);
+    const tick=()=>{n+=inc;el.textContent=n>=target?target:n;if(n<target)requestAnimationFrame(tick)};
+    tick();
+  });
+
+  /* back-to-top */
+  const topBtn=document.getElementById('btnTop');
+  window.addEventListener('scroll',()=>topBtn.style.display=scrollY>400?'block':'none');
+  topBtn.addEventListener('click',()=>scrollTo({top:0,behavior:'smooth'}));
+</script>
+</body>
 </html>

@@ -1,6 +1,37 @@
-// _variables.scss
-$primary-color: #c03333;
-$secondary-color: rgb(233, 197, 37);
-$bg-color: rgb(236, 236, 235);
-$header-font-size: 2rem;
-$base-font: Arial, sans-serif;
+// ===================
+// PALETA (mapa)
+// ===================
+$palette: (
+  primary  : #c03333,
+  secondary: rgb(233, 197, 37),
+  bg       : rgb(236, 236, 235),
+  dark     : #212529
+);
+
+@function color($key) { @return map-get($palette, $key); }
+
+// ===================
+// TIPOGRAFÍA & espacios
+// ===================
+$base-font        : Arial, sans-serif;
+$header-font-size : 2rem;
+$spacer           : 1rem;
+
+// ===================
+// BREAKPOINTS (mapa bootstrap-like)
+// ===================
+$breakpoints: (
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px
+);
+
+// ===================
+// Z-index capas comunes
+// ===================
+$z: (
+  header : 1000,
+  overlay: 1050,
+  offcanvas: 1100
+);

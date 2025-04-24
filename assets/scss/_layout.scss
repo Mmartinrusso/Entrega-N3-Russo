@@ -1,52 +1,59 @@
-// _layout.scss
+// ---------- Placeholders ----------
+%nav-link {
+  color: color(secondary);
+  text-decoration: none;
+  @include transition(color);
+  &:hover { color: darken(color(secondary), 10%); }
+}
+
+%card-base {
+  background: color(primary);
+  color: color(secondary);
+  border: 2px solid color(secondary);
+  border-radius: .65rem;
+  @include transition(transform);
+  &:hover { transform: translateY(-4px); }
+}
+
+// ---------- Header ----------
 header {
-  background-color: $primary-color;
-  padding: 10px;
-  text-align: center;
-  @include transition(background-color, 0.5s);
-
-  .header-title {
-    color: $secondary-color;
-    font-size: $header-font-size;
-    margin-bottom: 20px;
-  }
+  background: color(primary);
+  padding: .75rem;
+  position: sticky; top: 0; z-index: map-get($z, header);
+  .header-title { color: color(secondary); font-size: $header-font-size; }
 }
 
+// ---------- Navegación ----------
 .nav {
-  list-style: none;
-  margin: 0;
-  padding: 0;
+  list-style: none; margin: 0; padding: 0;
 
-  &-item {
-    margin: 0 15px;
-    display: inline-block;
-  }
-  
+  &-item { margin: 0 .75rem; display: inline-block; }
+
   &-link {
-    color: $secondary-color;
-    text-decoration: none;
-    @include transition(color, 0.3s);
-
-    &:hover {
-      color: darken($secondary-color, 10%);
-    }
-    
-    &.active,
-    &:focus {
-      background-color: $primary-color;
-      color: $secondary-color;
-    }
+    @extend %nav-link;
+    &.active, &:focus { background: color(primary); }
   }
 }
 
-main {
-  margin-top: 50px;
-  padding: 0 15px;
+// ---------- Main & footer ----------
+main { margin-top: 3.5rem; padding-inline: 1rem; }
+footer { background: lighten(color(bg), 8%); text-align: center; padding: 1rem; }
+/* HERO genérico — usa la paleta y se puede reutilizar */
+.hero {
+  @include flex-center(column);
+  text-align: center;
+  min-height: 45vh;
+  background: color(primary);
+  color: color(secondary);
+  position: relative;
+
+  &::before {           // overlay degradado suave
+    content: "";
+    position: absolute; inset: 0;
+    background: linear-gradient(to bottom, rgba(0,0,0,.25), rgba(0,0,0,.55));
+    z-index: 0;
+  }
+  >* { position: relative; z-index: 1; }
 }
 
-footer {
-  background-color: lighten($bg-color, 10%);
-  text-align: center;
-  padding: 10px;
-  margin-top: 40px;
-}
+@include mq(lg){ .hero { min-height: 60vh; } }
